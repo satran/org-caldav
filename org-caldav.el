@@ -1939,7 +1939,8 @@ To be removed when org dependency reaches >=9.2."
   "Helper function to finish inserting an org entry or todo.
 Sets the block's tags, and return its MD5."
   (org-back-to-heading)
-  (org-caldav--org-set-tags-to org-caldav-select-tags)
+  ;; FIXME commenting this out for enabling tags 
+  ;;(org-caldav--org-set-tags-to org-caldav-select-tags)
   (md5 (buffer-substring-no-properties
 	(org-entry-beginning-position)
 	(org-entry-end-position))))
